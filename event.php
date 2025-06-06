@@ -65,13 +65,14 @@ $conn->close();
 <body>
     <header>
         <h1>Upcoming Events</h1>
-        <nav>
+        
+    </header>
+    <nav>
             <a href="index.html">Home</a>
             <a href="event.php">Events</a>
             <a href="service.html">Services</a>
             <a href="contact.html">Contact</a>
         </nav>
-    </header>
     <section>
         <div class="event">
             <?php if (!empty($events)): ?>

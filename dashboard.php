@@ -25,13 +25,44 @@ $totalUsers = $dataUsers['total_users'];
 </head>
 <body>
     <h1>Admin Dashboard</h1>
+    <h2>total users :<?php echo $totalEvents; ?> </h2>
+    
 
     <div class="widgets">
         <div class="widget">
-            <h2>Overview</h2>
-            <p>Total Events: <span id="totalEvents"><?php echo $totalEvents; ?></span></p>
-            
+            <h2>Queries</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $contactQuery = "SELECT name, email, message FROM contact";
+                    $contactResult = $conn->query($contactQuery);
+                    if ($contactResult && $contactResult->num_rows > 0):
+                        while ($contactRow = $contactResult->fetch_assoc()):
+                    ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($contactRow['name']); ?></td>
+                        <td><?php echo htmlspecialchars($contactRow['email']); ?></td>
+                        <td><?php echo htmlspecialchars($contactRow['message']); ?></td>
+                    </tr>
+                    <?php
+                        endwhile;
+                    else:
+                    ?>
+                    <tr>
+                        <td colspan="3">No contact submissions found.</td>
+                    </tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
         </div>
+       
         <div class="widget">
             <h2>Event Details</h2>
             <table>
