@@ -1,4 +1,31 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "formdata";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT name, date FROM sheduler";
+$result = $conn->query($sql);
+
+$events = [];
+if ($result && $result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $events[] = $row;
+    }
+}
+$conn->close();
+?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,24 +67,28 @@
         <h1>Upcoming Events</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="event.html">Events</a>
+            <a href="event.php">Events</a>
             <a href="service.html">Services</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
     <section>
         <div class="event">
-            <h3>Annual Tech Conference</h3>
-            <p>Date: April 20, 2025</p>
-            <p>Location: Downtown Convention Center</p>
-            <p>Description: Join industry leaders to explore emerging technologies and innovations.</p>
+            <?php if (!empty($events)): ?>
+                <?php foreach ($events as $event): ?>
+                    <div class="event-details">
+                        <?php foreach ($event as $field => $value): ?>
+                            <p><strong><?php echo htmlspecialchars(ucfirst($field)); ?>:</strong> <?php echo htmlspecialchars($value); ?></p>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>No events found.</p>
+            <?php endif; ?>
         </div>
-        <div class="event">
-            <h3>Music Fest 2025</h3>
-            <p>Date: May 15, 2025</p>
-            <p>Location: Green Valley Park</p>
-            <p>Description: Experience live performances by top artists from around the globe.</p>
-        </div>
+        
+            
+        
     </section>
 </body>
 </html>
