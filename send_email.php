@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        $mail->setFrom('maheshbahadare9767@gmail.com', 'Jack');
+        $mail->setFrom('abc@gmail.com', 'Jack');
         $mail->addAddress($email);
         $mail->Subject = "Invitation to Event";
         $mail->Body = $message;
