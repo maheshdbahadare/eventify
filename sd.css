@@ -2,18 +2,37 @@ body {
            font-family: Arial, sans-serif;
            margin: 0;
            padding: 0;
-           background-color: #f4f4f9;
+           
+           background-image: linear-gradient(135deg, rgba(254, 31, 31, 0.75), rgba(5, 5, 5, 0.75),rgba(38, 20, 230, 0.75)), url('resource/back.jpg');
+
+
+           background-size: cover;
+           
+       }
+       section {
+           margin: 5rem;
+           
+           text-align: center;
+           color:white;
+           position:relative;
+           align-items: center;
        }
        header {
-           background:linear-gradient(to right, #55cc00, #002a80);
-           color: white;
+           
+           background: url('resource/back2.jpg') no-repeat center center;
+           backdrop-filter: blur(8px);
+           -webkit-backdrop-filter: blur(8px);
+           background-size: cover;
+
+           color: #f1f3f4;
+           text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
            text-align: center;
            padding: 1rem 0;
        }
        nav {
            display: flex;
            justify-content: center;
-           background:radial-gradient(circle, #00ff0d, #3700ff);
+           background-color:black;
            padding: 0.5rem 0;
        }
        nav a {
@@ -25,33 +44,35 @@ body {
        nav a:hover {
            text-decoration: underline;
        }
-       section {
-           padding: 2rem;
-           text-align: center;
-           background:linear-gradient(to right, #fe0612, #e516f4);
-       }
+       
        .features {
            display: flex;
            justify-content: center;
            flex-wrap: wrap;
            margin-top: 2rem;
-           background-color:aqua;
+          
        }
        .feature h3:hover{text-decoration:underline;
        color:green;
        background-color:black;}
        .feature {
-           background-color: hotpink;
+        background: linear-gradient(135deg, rgba(231, 84, 128, 0.7), rgba(0, 102, 204, 0.7));
            margin: 1rem;
            padding: 1rem;
            border: 1px solid #ddd;
            border-radius: 8px;
            width: 250px;
        }
-       footer {
-           text-align: center;
-           padding: 1rem;
-           background-color: #0044cc;
-           color: white;
-       }
+    footer {
+        position:relative;
+        margin-bottom:0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(255,0,0,0.85));
+        color: white;
+        z-index: 100;
+    }
        

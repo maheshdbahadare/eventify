@@ -5,30 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
-         nav {
-           display: flex;
-           justify-content: center;
-           background:radial-gradient(circle, #00ff0d, #3700ff);
-           padding: 0.5rem 0;
-       }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #eef2f5;
+        h1{
+            padding-bottom: 1rem;
         }
+        
+        
         header {
+            
             background-color: #0044cc;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding-bottom: 0rem;
         }
-        section {
-            padding: 2rem;
-            text-align: center;
-        }
+       
         form {
-            background-color: white;
+            background: linear-gradient(135deg, rgba(241, 239, 239, 0.7) 0%, rgba(238, 43, 43, 0.7) 100%);
             margin: auto;
             padding: 2rem;
             border-radius: 8px;
@@ -47,7 +38,7 @@
             border-radius: 4px;
         }
         form button {
-            background-color: #0044cc;
+            background-color:darkgreen;
             color: white;
             border: none;
             padding: 0.5rem 1rem;
@@ -64,14 +55,15 @@
 <body>
     <header>
         <h1>Contact Us</h1>
-        <nav>
+        
+    </header>
+    <nav style="margin: 0%;">
             <a href="index.html">Home</a>
             <a href="event.php">Events</a>
             <a href="service.html">Services</a>
             <a href="contact.html">Contact</a>
         </nav>
-    </header>
-    <section>
+    <section style="margin: rem auto; color: black; text-align: center;">
         <form action="contact.php" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>

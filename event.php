@@ -48,7 +48,7 @@ $conn->close();
             padding: 2rem;
         }
         .event {
-            background-color: white;
+            background: radial-gradient(circle, rgba(246, 28, 28, 0.7) 0%, rgba(9, 9, 9, 0.7) 100%);
             margin: 1rem auto;
             padding: 1rem;
             border-radius: 8px;
@@ -91,5 +91,8 @@ $conn->close();
             
         
     </section>
+    <footer style="position: absolute; bottom: 0; width: 100%;">
+        <p>&copy; 2025 Eventify. All rights reserved.</p>
+    </footer>
 </body>
 </html>
