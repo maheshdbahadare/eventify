@@ -68,6 +68,7 @@ $totalUsers = $dataUsers['total_users'];
             <table>
                 <thead>
                     <tr>
+                        <th>Status</th>
                         <th>Event Type</th>
                         <th>Date</th>
                         <th>Venue</th>
@@ -77,6 +78,16 @@ $totalUsers = $dataUsers['total_users'];
                 <tbody>
                     <?php foreach ($dataDetails as $row): ?>
                     <tr>
+                        <td>
+                            <form action="process_booking.php" method="POST">
+                            <label for="date">Event Date:</label><br>
+                            <input type="date" name="date" id="date" required><br><br>
+
+                            <button type="submit" name="action" value="accept">Accept</button>
+                            <button type="submit" name="action" value="reject">Reject</button>
+                        </form>
+                                        </td>
+                                        
                         <td><?php echo htmlspecialchars($row['evtype']); ?></td>
                         <td><?php echo htmlspecialchars($row['date']); ?></td>
                         <td><?php echo htmlspecialchars($row['venue']); ?></td>
