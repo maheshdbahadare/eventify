@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include 'backend/config.php';
 $queryDetails = "SELECT evtype, date, venue, guests FROM myform";
 $resultDetails = $conn->query($queryDetails);
 $dataDetails = $resultDetails->fetch_all(MYSQLI_ASSOC);

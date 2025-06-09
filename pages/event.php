@@ -31,6 +31,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
+    <link rel="stylesheet" href="../sd.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,7 +61,7 @@ $conn->close();
             color: #0044cc;
         }
     </style>
-    <link rel="stylesheet" href="sd.css">
+    
 </head>
 <body>
     <header>
@@ -68,10 +69,10 @@ $conn->close();
         
     </header>
     <nav>
-            <a href="index.html">Home</a>
-            <a href="event.php">Events</a>
-            <a href="service.html">Services</a>
-            <a href="contact.html">Contact</a>
+            <a href="../index.html">Home</a>
+            <a href="../pages/event.php">Events</a>
+            <a href="../pages/service.html">Services</a>
+            <a href="../pages/contact.html">Contact</a>
         </nav>
     <section>
         <div class="event">

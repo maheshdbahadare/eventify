@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="sd.css">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venue Booking</title>
+    <link rel="stylesheet" href="../sd.css">
     <style>
          
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('resource/back.jpg') no-repeat center center fixed;
+            background: url('../resource/back.jpg') no-repeat center center fixed;
             background-size: cover;
         }
         body {
@@ -64,14 +65,14 @@
     <header>
         <h1>Book a Venue for Your Event</h1>
         <nav>
-        <a href="index.html">Home</a>
-        <a href="event.php">Events</a>
-        <a href="service.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="../index.html">Home</a>
+        <a href="../pages/event.php">Events</a>
+        <a href="../pages/service.html">Services</a>
+        <a href="../pages/contact.html">Contact</a>
     </nav>
     </header>
     <main>
-        <form action="action.php" method="POST">
+        <form action="../backend/action.php" method="POST">
             <label for="state">Select State:</label>
             <select id="state"  name="state" required>
                 <option value="">Select a state</option>
